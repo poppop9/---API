@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import HomePage from '@/components/HomePage.vue'
 import mapShow from '@/components/mapShow.vue'
 import roadPlan from '@/components/roadPlan.vue'
-import HomePage from '@/components/HomePage.vue'
+import SearchLocation from '@/components/SearchLocation.vue'
 
 const routes = [
     {
@@ -23,6 +24,11 @@ const routes = [
         path: '/lxgh',
         name: 'roadPlan',
         component: roadPlan
+    },
+    {
+        path: '/search',
+        name: 'SearchLocation',
+        component: SearchLocation
     }
 ]
 

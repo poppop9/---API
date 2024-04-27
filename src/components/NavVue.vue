@@ -14,6 +14,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/lxgh">路线规划</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/search">搜索地点</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             其他
