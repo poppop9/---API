@@ -24,34 +24,24 @@
         <div class="col-9">
             <div class="card">
                 <div class="card-header">
-                    <h4>搜索结果</h4>
+                    <h4 class="text-center mb-0">搜索结果</h4>
                 </div>
                 <div class="card-body pb-0">
                     <div class="row d-flex">
-                        <div class="col-3 mb-3">
+                        <div class="col-3 mb-3" v-for="(item, index) in Resdata" :key="index">
                             <div class="card">
-                                <div class="card-body">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3 mb-3">
-                            <div class="card">
-                                <div class="card-body">
-                                </div>
-                            </div>
-                        </div>                        <div class="col-3 mb-3">
-                            <div class="card">
-                                <div class="card-body">
-                                </div>
-                            </div>
-                        </div>                        <div class="col-3 mb-3">
-                            <div class="card">
-                                <div class="card-body">
-                                </div>
-                            </div>
-                        </div>                        <div class="col-3 mb-3">
-                            <div class="card">
-                                <div class="card-body">
+                                <div class="card-body vstack pb-1">
+                                    <h6> <strong>{{ item.name }}</strong> </h6>
+                                    <hr>
+                                    <ul>
+                                        <li>
+                                            <span>{{ item.pname }}{{ item.cityname }}{{ item.adname }}</span>
+                                        </li>
+                                        <li>
+                                            {{ item.location }}
+                                        </li>
+                                    </ul>
+                                    <p class="mt-3 mb-0 ms-auto text-end text-secondary" style="font-size: small;">{{ item.type }}</p>
                                 </div>
                             </div>
                         </div>
@@ -72,6 +62,9 @@ const location = ref({
     region: '嘉兴市'
 });
 
+// 响应结果
+const Resdata = ref();
+
 function search() {
     axios.get('https://restapi.amap.com/v5/place/text', {
         params: {
@@ -80,7 +73,7 @@ function search() {
             region: location.value.region
         }
     }).then(res => {
-        alert(res.data.pois);
+        Resdata.value = res.data.pois;
     }).catch(err => {
         alert(err);
     });

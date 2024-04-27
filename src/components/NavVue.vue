@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/dtzs">地图展示</a>
+                        <a class="nav-link" href="/dtzs">地图展示</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/lxgh">路线规划</a>
