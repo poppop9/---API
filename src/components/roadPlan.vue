@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <h3 class="text-center mt-2">路径规划</h3>
+        <h3 class="text-center mt-3 mb-0">路径规划</h3>
     </div>
     <hr>
     <div class="row">

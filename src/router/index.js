@@ -2,11 +2,17 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import mapShow from '@/components/mapShow.vue'
 import roadPlan from '@/components/roadPlan.vue'
+import HomePage from '@/components/HomePage.vue'
 
 const routes = [
     {
         path: '/',
-        redirect: '/dtzs'
+        redirect: '/home'
+    },
+    {
+        path: '/home',
+        name: 'HomePage',
+        component: HomePage
     },
     {
         path: '/dtzs',

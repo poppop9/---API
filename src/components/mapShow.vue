@@ -1,11 +1,11 @@
 <template>
     <div class="row">
-        <h3 class="text-center">地图展示</h3>
+        <h3 class="text-center mb-0 mt-3">地图展示</h3>
     </div>
     <hr>
     <div class="row d-flex">
-        <div class="col-6 mx-auto">
-            <div ref="mapContainer" id="container" style="height: 500px;">
+        <div class="col-12 mx-auto">
+            <div ref="mapContainer" id="container" style="height: 550px;">
             </div>
         </div>
     </div>
